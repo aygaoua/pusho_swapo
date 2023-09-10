@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 21:14:01 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/08/30 18:29:13 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 13:56:30 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_error(int argc, char **argv)
 
 	i = 1;
 	if (argc < 2)
-		exit(1);
+		exit(0);
 	while (i < argc)
 	{
 		j = 0;

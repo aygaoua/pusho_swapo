@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 10:05:14 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/09 22:03:55 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 13:26:21 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_sort_fv(t_stack_node **a, t_stack_node **b)
 		ft_sb(b);
 	while (ft_lstsize(*b) != 0)
 		ft_p_a(a, b);
-	exit (1);
+	exit (0);
 }
 
 int	ft_sort_rev_check(t_stack_node b)

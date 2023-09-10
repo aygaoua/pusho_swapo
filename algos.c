@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:30:56 by aygaoua           #+#    #+#             */
-/*   Updated: 2023/09/07 00:46:35 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 13:03:00 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_sort_tr(t_stack_node **a)
 		ft_rra(a, 0);
 	if (ft_sort_check(**a) == 0)
 		ft_sa_or_b(a);
-	return (1);
+	return (0);
 }
 
 int	ft_sort(t_stack_node **a, t_stack_node **b)

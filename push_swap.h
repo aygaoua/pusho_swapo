@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 16:46:11 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/10 00:14:43 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 12:54:36 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,7 @@ void			ft_swap(long *a, long *b);
 int				ft_best_med(t_stack_node *a);
 void			ft_push_to_b(t_stack_node **a, t_stack_node **b);
 void			ft_back_to_a(t_stack_node **a, t_stack_node **b);
+int				ft_get_best_max(t_stack_node *b);
+int				ft_get_sec_max_val(t_stack_node *a);
 
 #endif
