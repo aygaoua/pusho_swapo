@@ -35,7 +35,6 @@ int	ft_get_smallest_valeu(t_stack_node *a)
 			smallest = a->val;
 		a = a->next;
 	}
-	// printf("smallest = %d\n", smallest);
 	return (smallest);
 }
 
@@ -57,21 +56,22 @@ int	ft_get_max_val(t_stack_node *a)
 
 int	ft_sort_tr(t_stack_node **a)
 {
-	int m;
+	int	m;
 
 	m = ft_get_max_val(*a);
 	if ((*a)->val == m)
 		ft_ra_or_b(a);
 	else if ((*a)->next->val == m)
 		ft_rra(a, 0);
-	if(ft_sort_check(**a) == 0)
+	if (ft_sort_check(**a) == 0)
 		ft_sa_or_b(a);
 	return (1);
 }
 
 int	ft_sort(t_stack_node **a, t_stack_node **b)
 {
-	int i;
+	int	i;
+
 	if (ft_lstsize(*a) == 3)
 		ft_sort_tr(a);
 	else if (ft_lstsize(*a) == 5 || ft_lstsize(*a) == 4)

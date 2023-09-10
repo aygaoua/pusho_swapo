@@ -27,7 +27,7 @@ void	ft_sa_or_b(t_stack_node **a)
 	write(1, "sa\n", 3);
 }
 
-void		ft_sb(t_stack_node **b)
+void	ft_sb(t_stack_node **b)
 {
 	if (b == NULL || (*b)->next == NULL)
 		return ;
@@ -40,7 +40,7 @@ void	ft_ra_or_b(t_stack_node **a)
 	t_stack_node	*first_list;
 	t_stack_node	*rotate_list;
 	t_stack_node	*last_list;
-	
+
 	if ((*a) == NULL || (*a)->next == NULL)
 		return ;
 	rotate_list = *a;

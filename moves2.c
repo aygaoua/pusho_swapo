@@ -12,40 +12,40 @@
 
 #include "push_swap.h"
 
-void    ft_ss(t_stack_node **a, t_stack_node **b)
+void	ft_ss(t_stack_node **a, t_stack_node **b)
 {
-    ft_sa_or_b_pls(a);
-    ft_sb_pls(b);
-    write(1, "ss\n", 3);
+	ft_sa_or_b_pls(a);
+	ft_sb_pls(b);
+	write(1, "ss\n", 3);
 }
 
-void    ft_rr(t_stack_node **a, t_stack_node **b)
+void	ft_rr(t_stack_node **a, t_stack_node **b)
 {
-    ft_ra_or_b_pls(a);
-    ft_rb_pls(b);
-    write(1, "rr\n", 3);
+	ft_ra_or_b_pls(a);
+	ft_rb_pls(b);
+	write(1, "rr\n", 3);
 }
 
-void    ft_rrr(t_stack_node **a, t_stack_node **b)
+void	ft_rrr(t_stack_node **a, t_stack_node **b)
 {
-    ft_rra_pls(a, 0);
-    ft_rrb_pls(b, 0);
-    write(1, "rrr\n", 4);
+	ft_rra_pls(a, 0);
+	ft_rrb_pls(b, 0);
+	write(1, "rrr\n", 4);
 }
 
-void    ft_sa_or_b_pls(t_stack_node **a)
+void	ft_sa_or_b_pls(t_stack_node **a)
 {
-    if (a == NULL || (*a)->next == NULL)
-        return ;
-    ft_swap(&(*a)->val, &(*a)->next->val);
+	if (a == NULL || (*a)->next == NULL)
+		return ;
+	ft_swap(&(*a)->val, &(*a)->next->val);
 }
 
-void    ft_ra_or_b_pls(t_stack_node **a)
+void	ft_ra_or_b_pls(t_stack_node **a)
 {
-    t_stack_node	*first_list;
+	t_stack_node	*first_list;
 	t_stack_node	*rotate_list;
 	t_stack_node	*last_list;
-	
+
 	if ((*a) == NULL || (*a)->next == NULL)
 		return ;
 	rotate_list = *a;

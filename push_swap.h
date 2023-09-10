@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 16:46:11 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/09 14:39:39 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 00:14:43 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,23 @@ typedef struct s_stack_node
 	struct s_stack_node		*prev;
 }	t_stack_node;
 
-void    		ft_ss(t_stack_node **a, t_stack_node **b);
-void    		ft_rr(t_stack_node **a, t_stack_node **b);
-void    		ft_rrr(t_stack_node **a, t_stack_node **b);
-void   			ft_sa_or_b_pls(t_stack_node **a);
-void    		ft_ra_or_b_pls(t_stack_node **a);
-void    		ft_sb_pls(t_stack_node **b);
-void   			ft_rb_pls(t_stack_node **b);
-void    		ft_rra_pls(t_stack_node **a, int i);
-void    		ft_rrb_pls(t_stack_node **b, int i);
+void			ft_ss(t_stack_node **a, t_stack_node **b);
+void			ft_rr(t_stack_node **a, t_stack_node **b);
+void			ft_rrr(t_stack_node **a, t_stack_node **b);
+void			ft_sa_or_b_pls(t_stack_node **a);
+void			ft_ra_or_b_pls(t_stack_node **a);
+void			ft_sb_pls(t_stack_node **b);
+void			ft_rb_pls(t_stack_node **b);
+void			ft_rra_pls(t_stack_node **a, int i);
+void			ft_rrb_pls(t_stack_node **b, int i);
 void			ft_sa_or_b(t_stack_node **a);
 void			ft_ra_or_b(t_stack_node **a);
 void			ft_rra(t_stack_node **a, int i);
 void			ft_sb(t_stack_node **b);
-void			ft_p_b(t_stack_node **a,t_stack_node **b);
-void			ft_p_a(t_stack_node **a,t_stack_node **b);
+void			ft_p_b(t_stack_node **a, t_stack_node **b);
+void			ft_p_a(t_stack_node **a, t_stack_node **b);
 void			ft_rb(t_stack_node **b);
-void    		ft_rrb(t_stack_node **b, int i);
+void			ft_rrb(t_stack_node **b, int i);
 void			ft_sort_tr_b(t_stack_node **b);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			**ft_split(char const *s, char c);
@@ -67,7 +67,7 @@ int				ft_empty_arg(char *c);
 int				ft_get_max_val(t_stack_node *a);
 int				ft_sort_fv(t_stack_node **a, t_stack_node **b);
 int				ft_sort_tr(t_stack_node **a);
-void 			ft_pop(t_stack_node *Top);
+void			ft_pop(t_stack_node *Top);
 void			ft_lstclear(t_stack_node **lst, void (*del)(void *));
 void			del(void *content);
 int				ft_sort_rev_check(t_stack_node b);
@@ -79,5 +79,7 @@ int				*ft_lst_to_tab(t_stack_node *a);
 int				ft_sort_int_tab(int *tab, int size);
 void			ft_swap(long *a, long *b);
 int				ft_best_med(t_stack_node *a);
+void			ft_push_to_b(t_stack_node **a, t_stack_node **b);
+void			ft_back_to_a(t_stack_node **a, t_stack_node **b);
 
 #endif
