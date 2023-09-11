@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 21:14:01 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/10 13:56:30 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 18:41:35 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,19 +95,9 @@ long	ft_atoi(const char *str)
 char	*ft_trance(int ac, char **av)
 {
 	int		i;
-	int		j;
 	char	*res;
 
-	i = 1;
-	j = 0;
-	while (i < ac)
-	{
-		while (av[i][j])
-			j++;
-		j = 0;
-		i++;
-	}
-	res = "\0";
+	res = malloc(1);
 	i = 1;
 	while (i < ac)
 	{
@@ -119,6 +109,11 @@ char	*ft_trance(int ac, char **av)
 	return (res);
 }
 
+void vv()
+{
+	system("leaks push_swap");
+}
+
 int	main(int ac, char **av)
 {
 	t_stack_node	*a;
@@ -127,7 +122,9 @@ int	main(int ac, char **av)
 	char			*string;
 	int				k;
 
+	// atexit(vv);
 	k = 1;
+	b = NULL;
 	if (ft_error(ac, av) == 0)
 		return (write(2, "Error\n", 6), 1);
 	while (av[k] != NULL && k < ac)
@@ -139,11 +136,26 @@ int	main(int ac, char **av)
 	k = 0;
 	string = ft_trance(ac, av);
 	arrtwo = ft_split(string, ' ');
+	free(string);
+	string = NULL;
 	if (ft_repeat_and_max(arrtwo) == 4294967296)
-		return (free(string), free(arrtwo), write(2, "Error\n", 6), 1);
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
 	while (arrtwo[k])
 		ft_lstadd_back(&a, ft_lstnew(ft_atoi(arrtwo[k++])));
+	// arrtwo = freeme(arrtwo, ft_lstsize(a));
 	if (ft_sort_check(*a) != 1)
 		ft_sort(&a, &b);
-	return (0);
+	ft_free_stacks(&a, &b);
+	exit(0);
+}
+
+void	ft_free_stacks(t_stack_node **a, t_stack_node **b)
+{
+	if (a)
+		ft_lstclear(a, del);
+	if (b)
+		ft_lstclear(b, del);
 }

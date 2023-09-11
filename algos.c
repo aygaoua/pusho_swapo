@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:30:56 by aygaoua           #+#    #+#             */
-/*   Updated: 2023/09/10 13:03:00 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 17:40:35 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_sort_tr(t_stack_node **a)
 	if ((*a)->val == m)
 		ft_ra_or_b(a);
 	else if ((*a)->next->val == m)
-		ft_rra(a, 0);
+		ft_rra(a);
 	if (ft_sort_check(**a) == 0)
 		ft_sa_or_b(a);
 	return (0);
@@ -70,24 +70,16 @@ int	ft_sort_tr(t_stack_node **a)
 
 int	ft_sort(t_stack_node **a, t_stack_node **b)
 {
-	int	i;
-
 	if (ft_lstsize(*a) == 3)
 		ft_sort_tr(a);
 	else if (ft_lstsize(*a) == 5 || ft_lstsize(*a) == 4)
 		ft_sort_fv(a, b);
-	else if (ft_lstsize(*a) < 3)
+	else if (ft_lstsize(*a) == 2)
 	{
-		i = ft_get_smallest_valeu(*a);
-		while (ft_sort_check(**a) == 0)
-		{
-			if ((*a)->val > (*a)->next->val && (*a)->next->val != i)
-				ft_sa_or_b(a);
-			else if (ft_pos_min(*a) > (ft_lstsize(*a) / 2))
-				ft_ra_or_b(a);
-			else
-				ft_rra(a, 0);
-		}
+		if (ft_sort_check(**a) == 0)
+			ft_ra_or_b(a);
+		else
+			return (0);
 	}
 	else
 		ft_sort_stack(a, b);

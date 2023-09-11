@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 01:53:19 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/07 02:08:02 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 17:27:06 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	ft_rr(t_stack_node **a, t_stack_node **b)
 
 void	ft_rrr(t_stack_node **a, t_stack_node **b)
 {
-	ft_rra_pls(a, 0);
-	ft_rrb_pls(b, 0);
+	ft_rra_pls(a);
+	ft_rrb_pls(b);
 	write(1, "rrr\n", 4);
 }
 

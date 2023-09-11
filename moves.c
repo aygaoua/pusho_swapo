@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 18:19:45 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/07 01:56:24 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 17:22:28 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_ra_or_b(t_stack_node **a)
 	write(1, "ra\n", 3);
 }
 
-void	ft_rra(t_stack_node **a, int i)
+void	ft_rra(t_stack_node **a)
 {
 	t_stack_node	*first_list;
 	t_stack_node	*rotate_list;
@@ -70,7 +70,5 @@ void	ft_rra(t_stack_node **a, int i)
 	penultimate_list->next = NULL;
 	rotate_list->next = first_list;
 	*a = rotate_list;
-	i = 1;
-	i++;
 	write(1, "rra\n", 4);
 }

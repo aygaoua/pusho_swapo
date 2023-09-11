@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:24:46 by aygaoua           #+#    #+#             */
-/*   Updated: 2023/09/10 13:46:11 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 17:24:14 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	ft_sort_tr_b(t_stack_node **b)
 	if ((*b)->val == m)
 		ft_rb(b);
 	else if ((*b)->next->val == m)
-		ft_rrb(b, 0);
+		ft_rrb(b);
 	else if (ft_sort_check(**b) == 0)
 		ft_sb(b);
 	return ;

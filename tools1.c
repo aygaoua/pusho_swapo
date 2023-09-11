@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 17:48:35 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/08/30 17:49:11 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 16:26:00 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char const *s2)
 {
 	char	*s;
 	int		i;
@@ -40,6 +40,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memmove(s, s1, i);
 	ft_memmove((s + i), s2, ft_strlen(s2));
 	s[len] = '\0';
+	if (s1)
+		free(s1);
 	return (s);
 }
 

@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:34:34 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/10 00:16:41 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 16:39:24 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	del(void *content)
 {
 	free (content);
+	content = NULL;
 }
 
 void	ft_lstclear(t_stack_node **lst, void (*del)(void *))
@@ -29,4 +30,5 @@ void	ft_lstclear(t_stack_node **lst, void (*del)(void *))
 		del(*lst);
 		*lst = tmp;
 	}
+	free(tmp);
 }

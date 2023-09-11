@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 02:00:18 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/07 02:05:07 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/10 17:23:24 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_rb_pls(t_stack_node **b)
 	*b = first_list;
 }
 
-void	ft_rra_pls(t_stack_node **a, int i)
+void	ft_rra_pls(t_stack_node **a)
 {
 	t_stack_node	*first_list;
 	t_stack_node	*rotate_list;
@@ -53,11 +53,9 @@ void	ft_rra_pls(t_stack_node **a, int i)
 	penultimate_list->next = NULL;
 	rotate_list->next = first_list;
 	*a = rotate_list;
-	i = 1;
-	i++;
 }
 
-void	ft_rrb_pls(t_stack_node **b, int i)
+void	ft_rrb_pls(t_stack_node **b)
 {
 	t_stack_node	*first_list;
 	t_stack_node	*rotate_list;
@@ -73,6 +71,4 @@ void	ft_rrb_pls(t_stack_node **b, int i)
 	penultimate_list->next = NULL;
 	rotate_list->next = first_list;
 	*b = rotate_list;
-	i = 1;
-	i++;
 }

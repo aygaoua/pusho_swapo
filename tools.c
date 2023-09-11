@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:20:59 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/08/30 17:46:35 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 17:34:16 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static size_t	lignes(const char *s, char c)
 
 char	**freeme(char **s, size_t i)
 {
-	while (i > 0 && s[i] != NULL)
+	while (i >= 0 && s[i] != NULL)
 	{
 		free(s[i]);
 		i--;
