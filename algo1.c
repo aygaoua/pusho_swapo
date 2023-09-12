@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 10:05:14 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/11 17:44:10 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 19:54:28 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,5 @@ int	ft_sort_stack(t_stack_node **a, t_stack_node **b)
 	ft_push_to_b(a, b);
 	ft_sort_tr(a);
 	ft_back_to_a(a, b);
-	ft_lstclear(b, del);
-	ft_lstclear(a, del);
 	exit (0);
 }

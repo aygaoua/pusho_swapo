@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 21:14:01 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/11 18:41:35 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/12 15:29:36 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,11 +109,6 @@ char	*ft_trance(int ac, char **av)
 	return (res);
 }
 
-void vv()
-{
-	system("leaks push_swap");
-}
-
 int	main(int ac, char **av)
 {
 	t_stack_node	*a;
@@ -122,18 +117,10 @@ int	main(int ac, char **av)
 	char			*string;
 	int				k;
 
-	// atexit(vv);
-	k = 1;
-	b = NULL;
-	if (ft_error(ac, av) == 0)
-		return (write(2, "Error\n", 6), 1);
-	while (av[k] != NULL && k < ac)
-	{
-		if (ft_empty_arg(av[k]) == 0)
-			return (write(2, "Error\n", 6), 1);
-		k++;
-	}
 	k = 0;
+	b = NULL;
+	if (ft_error(ac, av) == 0 || ft_errors(ac, av) == 1)
+		return (write(2, "Error\n", 6), 1);
 	string = ft_trance(ac, av);
 	arrtwo = ft_split(string, ' ');
 	free(string);
@@ -145,17 +132,8 @@ int	main(int ac, char **av)
 	}
 	while (arrtwo[k])
 		ft_lstadd_back(&a, ft_lstnew(ft_atoi(arrtwo[k++])));
-	// arrtwo = freeme(arrtwo, ft_lstsize(a));
 	if (ft_sort_check(*a) != 1)
 		ft_sort(&a, &b);
 	ft_free_stacks(&a, &b);
 	exit(0);
-}
-
-void	ft_free_stacks(t_stack_node **a, t_stack_node **b)
-{
-	if (a)
-		ft_lstclear(a, del);
-	if (b)
-		ft_lstclear(b, del);
 }

@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 18:28:50 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/08/30 18:29:01 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/12 15:30:59 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,26 @@ int	ft_empty_arg(char *c)
 		j++;
 	}
 	return (k);
+}
+
+void	ft_free_stacks(t_stack_node **a, t_stack_node **b)
+{
+	if (a)
+		ft_lstclear(a, del);
+	if (b)
+		ft_lstclear(b, del);
+}
+
+int	ft_errors(int ac, char **av)
+{
+	int	k;
+
+	k = 1;
+	while (av[k] != NULL && k < ac)
+	{
+		if (ft_empty_arg(av[k]) == 0)
+			return (1);
+		k++;
+	}
+	return (0);
 }

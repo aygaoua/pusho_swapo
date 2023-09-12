@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 16:46:11 by azgaoua           #+#    #+#             */
-/*   Updated: 2023/09/11 17:38:35 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/11 21:35:11 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ int				ft_best_med(t_stack_node *a);
 void			ft_push_to_b(t_stack_node **a, t_stack_node **b);
 void			ft_back_to_a(t_stack_node **a, t_stack_node **b);
 void			ft_free_stacks(t_stack_node **a, t_stack_node **b);
+int				ft_errors(int ac, char **av);
 
 #endif

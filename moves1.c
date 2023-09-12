@@ -35,26 +35,15 @@ void	ft_p_a(t_stack_node **a, t_stack_node **b)
 	return ;
 }
 
-// void	ft_pop(t_stack_node *top)
-// {
-// 	t_stack_node	topa;
-
-// 	topa = *top;
-// 	if (topa.next != NULL)
-// 		*top = *topa.next;
-// 	else
-// 		return ;
-// }
-
-void ft_pop(t_stack_node **top)
+void	ft_pop(t_stack_node **top)
 {
-    t_stack_node *temp;
-	 
-    if (*top == NULL)
-        return;
+	t_stack_node	*temp;
+
+	if (*top == NULL)
+		return ;
 	temp = *top;
-    *top = (*top)->next;
-    free(temp);
+	*top = (*top)->next;
+	free(temp);
 }
 
 void	ft_rb(t_stack_node **b)

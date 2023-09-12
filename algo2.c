@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:24:46 by aygaoua           #+#    #+#             */
-/*   Updated: 2023/09/10 17:24:14 by azgaoua          ###   ########.fr       */
+/*   Updated: 2023/09/12 13:59:23 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_get_med_valeu(t_stack_node *a)
 		med = tab[ft_lstsize(a) / 5];
 	else if (ft_lstsize(a) <= 500)
 		med = tab[ft_lstsize(a) / 10];
+	else
+		med = tab[ft_lstsize(a) / 15];
 	free(tab);
 	return (med);
 }
@@ -98,6 +100,8 @@ int	ft_best_med(t_stack_node *a)
 		med = tab[ft_lstsize(a) / 5];
 	else if (ft_lstsize(a) <= 500)
 		med = tab[ft_lstsize(a) / 10];
+	else
+		med = tab[ft_lstsize(a) / 15];
 	best = 0;
 	while (i < ft_lstsize(a))
 	{
