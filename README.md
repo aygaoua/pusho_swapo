@@ -1,4 +1,5 @@
 # pusho_swapo
 projct of sorting
 
-V 2.0
+V 2.1
+
